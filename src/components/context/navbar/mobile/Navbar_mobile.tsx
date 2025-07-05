@@ -1,6 +1,4 @@
 import React from "react";
-// import Navbar_content from "./Navbar_content";
-
 import { Button } from "@/components/ui/shadcn/button";
 import { Menu } from "lucide-react";
 import { DialogTitle } from "@radix-ui/react-dialog";
