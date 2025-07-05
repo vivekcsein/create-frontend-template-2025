@@ -1,4 +1,4 @@
-'server-only';
+"server-only";
 
 const _envAppConfig = {
   APP_NAME: process.env.APP_NAME || "Create-Frontend-Template-2025",
@@ -24,7 +24,6 @@ const _envRootLayoutConfig = {
   rootLayoutAPI:
     process.env.ROOT_LAYOUT_API ||
     ("http://localhost:3000/api/rootLayout" as string),
-
 };
 
 const _envGoogleConfig = {
