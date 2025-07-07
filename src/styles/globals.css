@@ -168,9 +168,7 @@ h6 {
   text-wrap: pretty;
 }
 
-p,
-div,
-span {
+p {
   font-size: .7rem;
 }
 
@@ -187,7 +185,7 @@ h6,
 @media only screen and (max-width: 720px) {
 
   h1 {
-    font-size: 2.25rem;
+    font-size: 2rem;
   }
 
   h2 {
@@ -210,9 +208,7 @@ h6,
     font-size: .2rem;
   }
 
-  p,
-  div,
-  span {
+  p {
     font-size: 0.8rem;
   }
 }
