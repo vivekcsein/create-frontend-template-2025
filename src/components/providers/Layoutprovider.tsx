@@ -23,6 +23,7 @@ const Layoutprovider = ({
         isMobile={isMobile}
         headerData={HeaderData}
         refObject={headerRef}
+        isAuthenticated={true}
       />
       <main className="flex-1 overflow-hidden min-h-screen">
         <div className="mx-auto p-6">{children}</div>

@@ -28,7 +28,7 @@ const Themes = () => {
           </NavigationMenuTrigger>
           <NavigationMenuContent className="transform -translate-x-1/4 mt-1">
             <Border_shadow variant="offset-top-right" size="small">
-              <div className="flex flex-col gap-5 py-2 px-4">
+              <ul className="flex flex-col gap-5 py-2 px-4 bg-background rounded-md">
                 <NavigationMenuItem
                   onClick={() => setTheme("light")}
                   className="coolLink cursor-pointer"
@@ -47,7 +47,7 @@ const Themes = () => {
                 >
                   System
                 </NavigationMenuItem>
-              </div>
+              </ul>
             </Border_shadow>
           </NavigationMenuContent>
         </NavigationMenuItem>

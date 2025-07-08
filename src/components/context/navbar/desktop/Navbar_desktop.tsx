@@ -19,7 +19,7 @@ const Navbar_desktop = ({
 }) => {
   return (
     <nav>
-      <NavigationMenu className="mr-5">
+      <NavigationMenu>
         <NavigationMenuList className="flex gap-5">
           {navbarlinks.map((links) => {
             return links.sublinks ? (
@@ -40,7 +40,7 @@ const Navbar_desktop = ({
           <NavigationMenuItem className="center">
             <Themes />
           </NavigationMenuItem>
-          <NavigationMenuItem className="center">
+          <NavigationMenuItem className="center mr-5">
             {isAuthenticated ? <Navbar_user /> : <Navbar_auth />}
           </NavigationMenuItem>
         </NavigationMenuList>
