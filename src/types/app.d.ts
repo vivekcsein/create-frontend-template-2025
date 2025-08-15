@@ -4,8 +4,8 @@ export type ImageProps = {
   src: string;
   alt: string;
   href?: string;
-  width?: string;
-  height?: string;
+  width?: number;
+  height?: number;
   color?: string;
   className?: string;
 };
