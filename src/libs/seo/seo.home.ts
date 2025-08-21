@@ -4,8 +4,7 @@ import { envFrontendConfig } from "../env/env.frontend";
 const frontendUrl = envFrontendConfig.APP_FRONTEND;
 
 const SEO: Metadata = {
-  title:
-    "Next.js Developer  @vivekcsein",
+  title: "Next.js Developer  @vivekcsein",
   description:
     "A production-grade Next.js frontend template for 2025, built with TypeScript, Tailwind CSS, Redux Toolkit, and optimized for scalability, performance, and developer experience.",
   keywords:

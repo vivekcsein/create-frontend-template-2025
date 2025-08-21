@@ -2,7 +2,6 @@
 
 import clsx from "clsx";
 import React from "react";
-import { useBreakpoint } from "@/libs/hooks/use-breakpoints";
 import { useHamburgerMenu } from "@/components/providers/HamburgerProvider";
 
 interface SidebarProps {
@@ -12,8 +11,6 @@ interface SidebarProps {
 }
 const Sidebar = ({ menuKey, dir = "right", children }: SidebarProps) => {
   const { isOpen, closeMenu } = useHamburgerMenu(menuKey);
-  const { isMobile, isTablet } = useBreakpoint();
-  const isResponsive = isMobile || isTablet;
 
   return (
     <>
@@ -23,15 +20,15 @@ const Sidebar = ({ menuKey, dir = "right", children }: SidebarProps) => {
         className={clsx(
           "fixed left-0 right-0 bottom-0 bg-black/30 backdrop-blur-md z-[998] transition-opacity duration-300",
           isOpen ? "opacity-100 visible" : "opacity-0 invisible",
-          isResponsive && isOpen ? "top-[43px]" : "top-[60px]"
+          isOpen && "top-[45px]"
         )}
       />
       {/* Sidebar opem menu */}
       <div
         className={clsx(
-          "fixed w-2/3 h-screen bg-white z-[999] transition-transform duration-300",
+          "fixed w-1/2 h-screen bg-white z-[999] transition-transform duration-300 py-6 px-4 overflow-y-auto",
           dir === "left" ? "left-0" : "right-0",
-          isResponsive && isOpen ? "top-[43px]" : "top-[60px]",
+          isOpen && "top-[45px]",
           isOpen
             ? "translate-x-0"
             : dir === "left"

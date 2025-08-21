@@ -1,8 +1,9 @@
 "use client";
 import React from "react";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useBreakpoint } from "@/libs/hooks/use-breakpoints";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -11,8 +12,11 @@ const Animate_header = ({
 }: {
   refObject: React.RefObject<HTMLDivElement | null>;
 }) => {
+  const { isMobile, isTablet } = useBreakpoint();
+  const isResponsive = isMobile || isTablet;
   useGSAP(() => {
     if (!refObject?.current) return;
+    if (isResponsive) return;
 
     const tl = gsap.timeline({ paused: true });
 
